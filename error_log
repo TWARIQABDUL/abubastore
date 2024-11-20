@@ -1,0 +1,7 @@
+[10-Sep-2021 09:19:56 UTC] PHP Warning:  mail() has been disabled for security reasons in /home/themesv1/public_html/html-templates/swiftshop/contact.php on line 13
+[10-Sep-2021 09:20:02 UTC] PHP Warning:  mail() has been disabled for security reasons in /home/themesv1/public_html/html-templates/swiftshop/contact.php on line 13
+[10-Sep-2021 09:21:30 UTC] PHP Warning:  mail() has been disabled for security reasons in /home/themesv1/public_html/html-templates/swiftshop/contact.php on line 16
+[10-Sep-2021 09:22:27 UTC] PHP Warning:  mail() has been disabled for security reasons in /home/themesv1/public_html/html-templates/swiftshop/contact.php on line 16
+[10-Sep-2021 06:02:07 America/New_York] PHP Warning:  Use of undefined constant NUL - assumed 'NUL' (this will throw an Error in a future version of PHP) in /home/getmasum/public_html/html-preview/swiftshop/contact.php on line 15
+[10-Sep-2021 06:02:18 America/New_York] PHP Warning:  Use of undefined constant NUL - assumed 'NUL' (this will throw an Error in a future version of PHP) in /home/getmasum/public_html/html-preview/swiftshop/contact.php on line 15
+[10-Sep-2021 06:03:01 America/New_York] PHP Warning:  Use of undefined constant NUL - assumed 'NUL' (this will throw an Error in a future version of PHP) in /home/getmasum/public_html/html-preview/swiftshop/contact.php on line 15
