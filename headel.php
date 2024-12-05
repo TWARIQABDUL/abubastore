@@ -251,7 +251,7 @@
                                     <!-- Mini Cart Wrapper -->
                                     <div class="mini-cart-wrapper">
                                         <!-- Product List -->
-                                        <div class="mc-pro-list fix">
+                                        <div class="mc-pro-list fix" id="cart">
                                             <div class="mc-sin-pro fix">
                                                 <a href="#" class="mc-pro-image float-start"><img
                                                         src="img/product/bag.jpg" alt="" /></a>

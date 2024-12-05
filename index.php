@@ -46,7 +46,7 @@
 	<!-- End Preloader -->
 
 	<!--  Start Header  -->
-	<?php 
+	<?php
 	include "headel.php"
 	?>
 	<!--  End Header  -->
@@ -128,45 +128,10 @@
 	<!--  Promo ITEM STRAT  -->
 	<section id="promo_area" class="section_padding">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="single_promo bg-color">
-						<img src="img/product/bag.jpg" alt="promo image">
-						<div class="box-content">
-							<div class="promo-content">
-								<span class="post">2021 Collection</span>
-								<h3 class="title">Shoes</h3>
-								<a href="product-details.php">Shop Now</a>
-							</div>
-						</div>
-					</div>
-				</div><!--  End Col -->
+			<div class="row" id="promo">
 
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="single_promo bg-color2">
-						<img src="img/product/jeans.webp" alt="promo image">
-						<div class="box-content">
-							<div class="promo-content">
-								<span class="post">Sprint Collection</span>
-								<h3 class="title">Watch</h3>
-								<a href="product-details.php">Shop Now</a>
-							</div>
-						</div>
-					</div>
-				</div><!--  End Col -->
-
-				<div class="col-lg-4 col-md-6 col-sm-12">
-					<div class="single_promo bg-color3">
-						<img src="img/product/shoes.jpg" alt="promo image">
-						<div class="box-content">
-							<div class="promo-content">
-								<span class="post">Exclusive Desgin</span>
-								<h3 class="title">Bags</h3>
-								<a href="product-details.php">Shop Now</a>
-							</div>
-						</div>
-					</div>
-				</div><!--  End Col -->
+				<!-- my fetc -->
+				
 			</div>
 		</div>
 	</section>
@@ -197,259 +162,9 @@
 				</div>
 
 				<div class="product_item">
-					<div class="row">
-						<div class="col-lg-3 col-md-6 col-12 mix sale">
-							<div class="product-grid">
-								<div class="product-image">
-									<a href="#">
-										<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-										<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-									</a>
-									<ul class="social">
-										<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-										<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-										<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-									</ul>
-
-								</div>
-
-								<div class="product-content">
-									<ul class="rating">
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-									</ul>
-
-									<h3 class="title"><a href="#">Product Title</a></h3>
-									<div class="price">$15.00
-
-									</div>
-								</div>
-							</div>
-						</div><!-- End Col -->
-
-						<div class="col-lg-3 col-md-6 col-12 mix ftrd">
-							<div class="product-grid">
-								<div class="product-image">
-									<a href="#">
-										<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-										<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-									</a>
-									<ul class="social">
-										<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-										<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-										<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-									</ul>
-									<span class="product-new-label">-20%</span>
-								</div>
-								<div class="product-content">
-									<ul class="rating">
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-									</ul>
-
-									<h3 class="title"><a href="#">canvas</a></h3>
-									<div class="price">$23.00
-										<span>$25.00</span>
-									</div>
-								</div>
-							</div>
-						</div><!-- End Col -->
-
-						<div class="col-lg-3 col-md-6 col-12 mix">
-							<div class="product-grid">
-								<div class="product-image">
-									<a href="#">
-										<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-										<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-									</a>
-									<ul class="social">
-										<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-										<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-										<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-									</ul>
-
-								</div>
-
-								<div class="product-content">
-									<ul class="rating">
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-									</ul>
-
-									<h3 class="title"><a href="#">Product Title</a></h3>
-									<div class="price">$40.00
-									</div>
-								</div>
-							</div>
-						</div><!-- End Col -->
-
-
-						<div class="col-lg-3 col-md-6 col-12 mix sale bslr">
-							<div class="product-grid">
-								<div class="product-image">
-									<a href="#">
-										<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-										<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-									</a>
-									<ul class="social">
-										<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-										<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-										<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-									</ul>
-									<span class="product-new-label">New</span>
-								</div>
-								<div class="product-content">
-									<ul class="rating">
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-									</ul>
-
-									<h3 class="title"><a href="#">Product Title</a></h3>
-									<div class="price">$80.00
-										<span>$60.00</span>
-									</div>
-								</div>
-							</div>
-						</div><!-- End Col -->
-
-
-						<div class="col-lg-3 col-md-6 col-12 mix ftrd">
-							<div class="product-grid">
-								<div class="product-image">
-									<a href="#">
-										<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-										<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-									</a>
-									<ul class="social">
-										<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-										<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-										<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-									</ul>
-									<span class="product-new-label">Sale</span>
-								</div>
-								<div class="product-content">
-									<ul class="rating">
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-									</ul>
-
-									<h3 class="title"><a href="#">Product Title</a></h3>
-									<div class="price">$30.00
-
-									</div>
-								</div>
-							</div>
-						</div><!-- End Col -->
-
-						<div class="col-lg-3 col-md-6 col-12 mix sale bslr">
-							<div class="product-grid">
-								<div class="product-image">
-									<a href="#">
-										<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-										<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-									</a>
-									<ul class="social">
-										<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-										<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-										<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-									</ul>
-									<span class="product-new-label">-30%</span>
-								</div>
-								<div class="product-content">
-									<ul class="rating">
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-									</ul>
-
-									<h3 class="title"><a href="#">Product Title</a></h3>
-									<div class="price">$70.00
-										<span>$25.00</span>
-									</div>
-								</div>
-							</div>
-						</div><!-- End Col -->
-
-						<div class="col-lg-3 col-md-6 col-12 mix sale bslr">
-							<div class="product-grid">
-								<div class="product-image">
-									<a href="#">
-										<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-										<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-									</a>
-									<ul class="social">
-										<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-										<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-										<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-									</ul>
-
-								</div>
-								<div class="product-content">
-									<ul class="rating">
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-									</ul>
-
-									<h3 class="title"><a href="#">Product Title</a></h3>
-									<div class="price">$100.00
-
-									</div>
-								</div>
-							</div>
-						</div><!-- End Col -->
-
-
-						<div class="col-lg-3 col-md-6 col-12 mix sale bslr">
-							<div class="product-grid">
-								<div class="product-image">
-									<a href="#">
-										<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-										<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-									</a>
-									<ul class="social">
-										<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-										<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-										<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-									</ul>
-									<span class="product-new-label">-50%</span>
-								</div>
-								<div class="product-content">
-									<ul class="rating">
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-										<li class="fa fa-star"></li>
-									</ul>
-
-									<h3 class="title"><a href="#">Product Title</a></h3>
-									<div class="price">$100.00
-										<span>$50.00</span>
-									</div>
-								</div>
-							</div>
-						</div><!-- End Col -->
-
+					
+					<div class="row" id="promocontainer">
+						<!-- dynamic product from js -->
 					</div>
 				</div>
 			</div>
@@ -465,9 +180,9 @@
 					<div class="special_info">
 						<span>Hurry Up! Offer Ends In</span>
 						<h3>Summer Flash Sale </h3>
-						<p>Don’t miss out on our exclusive summer deals! Grab your 
+						<p>Don’t miss out on our exclusive summer deals! Grab your
 							favorites at unbeatable prices before time runs out.
-							 Act fast and enjoy incredible savings! </p>
+							Act fast and enjoy incredible savings! </p>
 						<div id="countdown" class="text-center"></div>
 						<div class="clearfix"></div>
 						<a href="#" class="main_btn">Shop Now</a>
@@ -501,259 +216,8 @@
 				</div>
 			</div>
 
-			<div class="row text-center">
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="product-grid">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-								<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-							</a>
-							<ul class="social">
-								<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-								<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-								<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">Sale</span>
-						</div>
-
-						<div class="product-content">
-							<ul class="rating">
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-							</ul>
-
-							<h3 class="title"><a href="#">Product Title</a></h3>
-							<div class="price">$15.00
-								<span>$30.00</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- End Col -->
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="product-grid">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-								<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-							</a>
-							<ul class="social">
-								<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-								<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-								<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">-20%</span>
-						</div>
-						<div class="product-content">
-							<ul class="rating">
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-							</ul>
-
-							<h3 class="title"><a href="#">Product Title</a></h3>
-							<div class="price">$23.00
-								<span>$25.00</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- End Col -->
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="product-grid">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-								<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-							</a>
-							<ul class="social">
-								<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-								<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-								<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">Sale</span>
-						</div>
-
-						<div class="product-content">
-							<ul class="rating">
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-							</ul>
-
-							<h3 class="title"><a href="#">Product Title</a></h3>
-							<div class="price">$40.00
-								<span>$35.00</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- End Col -->
-
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="product-grid">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-								<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-							</a>
-							<ul class="social">
-								<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-								<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-								<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">New</span>
-						</div>
-						<div class="product-content">
-							<ul class="rating">
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-							</ul>
-
-							<h3 class="title"><a href="#">Product Title</a></h3>
-							<div class="price">$80.00
-								<span>$60.00</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- End Col -->
-
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="product-grid">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-								<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-							</a>
-							<ul class="social">
-								<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-								<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-								<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">Sale</span>
-						</div>
-						<div class="product-content">
-							<ul class="rating">
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-							</ul>
-
-							<h3 class="title"><a href="#">Product Title</a></h3>
-							<div class="price">$30.00
-								<span>$21.00</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- End Col -->
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="product-grid">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-								<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-							</a>
-							<ul class="social">
-								<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-								<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-								<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">-30%</span>
-						</div>
-						<div class="product-content">
-							<ul class="rating">
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-							</ul>
-
-							<h3 class="title"><a href="#">Product Title</a></h3>
-							<div class="price">$70.00
-								<span>$25.00</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- End Col -->
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="product-grid">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-								<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-							</a>
-							<ul class="social">
-								<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-								<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-								<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">Sale</span>
-						</div>
-						<div class="product-content">
-							<ul class="rating">
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-							</ul>
-
-							<h3 class="title"><a href="#">Product Title</a></h3>
-							<div class="price">$100.00
-								<span>$80.00</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- End Col -->
-
-
-				<div class="col-lg-3 col-md-6 col-12">
-					<div class="product-grid">
-						<div class="product-image">
-							<a href="#">
-								<img class="pic-1" src="img/product/p1.jpg" alt="product image">
-								<img class="pic-2" src="img/product/p1.jpg" alt="product image">
-							</a>
-							<ul class="social">
-								<li><a href="" data-tip="Quick View"><i class="pe-7s-search"></i></a></li>
-								<li><a href="" data-tip="Add to Wishlist"><i class="pe-7s-like"></i></a></li>
-								<li><a href="" data-tip="Add to Cart"><i class="pe-7s-cart"></i></a></li>
-							</ul>
-							<span class="product-new-label">-50%</span>
-						</div>
-						<div class="product-content">
-							<ul class="rating">
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-								<li class="fa fa-star"></li>
-							</ul>
-
-							<h3 class="title"><a href="#">Product Title</a></h3>
-							<div class="price">$100.00
-								<span>$50.00</span>
-							</div>
-						</div>
-					</div>
-				</div><!-- End Col -->
+			<div class="row text-center" id="allproduct">
+				<!-- dynamicaly fetched -->
 			</div>
 		</div>
 	</section>
@@ -1002,7 +466,7 @@
 	<!--   Brand end  -->
 
 	<!--  FOOTER START  -->
-	<?php 
+	<?php
 	include "footer.php"
 	?>
 	<!--  FOOTER END  -->
@@ -1025,6 +489,7 @@
 	<script src="js/simplePlayer.js"></script>
 	<script src="js/scrolltopcontrol.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/interacting.js"></script>
 	<!-- End jQuery -->
 
 </body>
