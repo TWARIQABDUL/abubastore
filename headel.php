@@ -244,7 +244,7 @@
                                 <div class="cart_menu_area">
                                     <div class="cart_icon">
                                         <a href="cart.php"><i class="pe-7s-shopbag" aria-hidden="true"></i></a>
-                                        <span class="cart_number">2</span>
+                                        <span class="cart_number" id="cart-count">2</span>
                                     </div>
 
 
@@ -252,7 +252,7 @@
                                     <div class="mini-cart-wrapper">
                                         <!-- Product List -->
                                         <div class="mc-pro-list fix" id="cart">
-                                            <div class="mc-sin-pro fix">
+                                            <!-- <div class="mc-sin-pro fix">
                                                 <a href="#" class="mc-pro-image float-start"><img
                                                         src="img/product/bag.jpg" alt="" /></a>
                                                 <div class="mc-pro-details fix">
@@ -270,11 +270,11 @@
                                                     <span>1 x $50.00</span>
                                                     <a class="pro-del" href="#"><i class="pe-7s-close"></i></a>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <!-- Sub Total -->
                                         <div class="mc-subtotal fix">
-                                            <h4>TOTAL: <span>$50.00</span></h4>
+                                            <h4>TOTAL: <span id="total_price">$50.00</span></h4>
                                         </div>
                                         <!-- Cart Button -->
                                         <div class="mc-button">

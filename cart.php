@@ -70,7 +70,7 @@
 										<th class="cpt_r">remove</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody id="table-cart">
 									<tr>
 										<td><span class="cp_no">1</span></td>
 										<td><a href="#" class="cp_img"><img src="img/product/bag.jpg" alt="" /></a></td>
@@ -176,5 +176,6 @@
 		<script src="js/simplePlayer.js"></script>
 		<script src="js/scrolltopcontrol.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/interacting.js"></script>
 	</body>
 </html>
