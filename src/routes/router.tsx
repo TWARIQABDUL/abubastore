@@ -21,6 +21,7 @@ const SignUp = lazy<() => ReactElement>(() => import('pages/authentication/SignU
 const ErrorPage = lazy<() => ReactElement>(() => import('pages/error/ErrorPage'));
 const AddProduct = lazy<() => ReactElement>(() => import('pages/profiles/AddProduct'));
 
+
 const routes: RouteObject[] = [
   {
     element: (
