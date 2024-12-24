@@ -1,22 +1,25 @@
 import { GridRowsProp } from '@mui/x-data-grid';
+// import axios from 'axios';
+
+
 
 export const rows: GridRowsProp = [
   {
     id: 1,
-    name: 'Twariq Abdalazizi',
+    names: 'Twariq Abdalazizi',
     email: 'tariqabdalazizi@gmail.com',
     phone: '(555) 123-4567',
     'billing-address': 'Kigali, Rwanda',
     'total-spent': 1000,
   },
-  // {
-  //   id: 2,
-  //   name: 'Brian Edwards',
-  //   email: 'brian@example.com',
-  //   phone: '(555) 234-5678',
-  //   'billing-address': '456 Oak Street, Lincoln, NE',
-  //   'total-spent': 199,
-  // },
+  {
+    id: 2,
+    names: 'Brian Edwards',
+    email: 'brian@example.com',
+    phone: '(555) 234-5678',
+    'billing-address': '456 Oak Street, Lincoln, NE',
+    'total-spent': 199,
+  },
   // {
   //   id: 3,
   //   name: 'George Oliver',

@@ -1,4 +1,4 @@
-import { useMemo, useEffect, ReactElement } from 'react';
+import { useMemo, useEffect, ReactElement, useState } from 'react';
 import { Stack, Avatar, Tooltip, Typography, CircularProgress } from '@mui/material';
 import {
   GridApi,
@@ -16,16 +16,18 @@ import IconifyIcon from 'components/base/IconifyIcon';
 import { currencyFormat } from 'helpers/format-functions';
 import CustomPagination from 'components/common/CustomPagination';
 import CustomNoResultsOverlay from 'components/common/CustomNoResultsOverlay';
+import axios from 'axios';
+
 
 const columns: GridColDef<any>[] = [
   {
-    field: 'id',
+    field: 'order_id',
     headerName: 'ID',
     resizable: false,
     minWidth: 60,
   },
   {
-    field: 'name',
+    field: 'customer_name',
     headerName: 'Name',
     valueGetter: (params: any) => {
       return params;
@@ -33,10 +35,10 @@ const columns: GridColDef<any>[] = [
     renderCell: (params: GridRenderCellParams<any, any, any, GridTreeNodeWithRender>) => {
       return (
         <Stack direction="row" gap={1} alignItems="center">
-          <Tooltip title={params.row.name} placement="top" arrow>
-            <Avatar {...stringAvatar(params.row.name)} />
+          <Tooltip title={params.row.customer_name} placement="top" arrow>
+            <Avatar {...stringAvatar(params.row.customer_name)} />
           </Tooltip>
-          <Typography variant="body2">{params.row.name}</Typography>
+          <Typography variant="body2">{params.row.customer_name}</Typography>
         </Stack>
       );
     },
@@ -59,7 +61,7 @@ const columns: GridColDef<any>[] = [
     minWidth: 115,
   },
   {
-    field: 'billing-address',
+    field: 'shipping_address',
     headerName: 'Billing Address',
     sortable: false,
     resizable: false,
@@ -67,7 +69,7 @@ const columns: GridColDef<any>[] = [
     minWidth: 250,
   },
   {
-    field: 'total-spent',
+    field: 'total_amount',
     headerName: 'Total Spent',
     resizable: false,
     sortable: false,
@@ -119,13 +121,34 @@ const columns: GridColDef<any>[] = [
   },
 ];
 const CustomerTable = ({ searchText }: { searchText: string }): ReactElement => {
+  const baseUrl ="http://localhost/abuba-ecommerce-backend"
   const apiRef = useGridApiRef<GridApi>();
+  const [dyrow, setRow] = useState<any[]>([]);
 
+  const getOrders = async () => {
+    try {
+      const response = await axios.get(`${baseUrl}/get-orders`);
+      return response.data; // Return the data
+    } catch (error) {
+      console.error('Error fetching orders:', error);
+      return []; // Return an empty array in case of error
+    }
+  };
+  // fetch orders
   const visibleColumns = useMemo(
     () => columns.filter((column) => column.field !== 'id'),
     [columns],
   );
+  useEffect(()=>{
+    const fetchOrders = async () => {
+      const orders = await getOrders(); // Wait for the API response
+      setRow(orders); // Update the state with fetched data
+    };
 
+    fetchOrders();
+  },[])
+  console.log(dyrow);
+  
   useEffect(() => {
     apiRef.current.setQuickFilterValues(
       searchText.split(/\b\W+\b/).filter((word: string) => word !== ''),
@@ -155,7 +178,8 @@ const CustomerTable = ({ searchText }: { searchText: string }): ReactElement => 
         checkboxSelection
         disableColumnMenu
         disableRowSelectionOnClick
-        rows={rows}
+        rows={dyrow || []}
+        getRowId={(row) => row.order_id}
         onResize={() => {
           apiRef.current.autosizeColumns({
             includeOutliers: true,

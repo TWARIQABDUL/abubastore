@@ -16,7 +16,7 @@ const navItems: NavItem[] = [
   },
   {
     id: 2,
-    path: '#!',
+    path: 'addproduct',
     title: 'Profile',
     icon: 'clarity:user-line',
     active: false,

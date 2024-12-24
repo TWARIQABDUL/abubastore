@@ -1,13 +1,31 @@
 import { Box, Paper, Typography } from '@mui/material';
 import EarningsChart from './EarningsChart';
-import { ReactElement, useEffect, useRef } from 'react';
+import { ReactElement, useEffect, useRef, useState } from 'react';
 import EChartsReactCore from 'echarts-for-react/lib/core';
 import { currencyFormat } from 'helpers/format-functions';
+import axios from 'axios';
 
 const Earnings = (): ReactElement => {
   const chartRef = useRef<EChartsReactCore | null>(null);
+  const [totalEarnings, setTotalEarnings] = useState<number>(0);
+  const [profitPercentage, setProfitPercentage] = useState<number>(0);
+  const baseUrl = "http://localhost/abuba-ecommerce-backend"
 
   useEffect(() => {
+    const fetchEarnings = async () => {
+      try {
+        const response = await axios.get(`${baseUrl}/earning`);
+        const { total_earnings, profit_percentage } = response.data;
+
+        setTotalEarnings(parseFloat(total_earnings));
+        setProfitPercentage(profit_percentage);
+      } catch (error) {
+        console.error('Error fetching earnings:', error);
+      }
+    };
+
+    fetchEarnings();
+
     const handleResize = () => {
       if (chartRef.current) {
         const echartsInstance = chartRef.current.getEchartsInstance();
@@ -34,10 +52,10 @@ const Earnings = (): ReactElement => {
         mb={4.5}
         fontSize={{ xs: 'h2.fontSize', sm: 'h1.fontSize' }}
       >
-        {currencyFormat(6078.76, { useGrouping: false })}
+        {currencyFormat(totalEarnings, { useGrouping: false })}
       </Typography>
       <Typography variant="body1" color="text.primary" mb={15}>
-        Profit is 48% More than last Month
+        Profit is {profitPercentage}% More than last Month
       </Typography>
       <Box
         flex={1}
@@ -46,6 +64,7 @@ const Earnings = (): ReactElement => {
         }}
       >
         <EarningsChart
+          value={profitPercentage}
           chartRef={chartRef}
           sx={{
             display: 'flex',
@@ -64,7 +83,7 @@ const Earnings = (): ReactElement => {
           right={0}
           bottom={0}
         >
-          80%
+          {profitPercentage}%
         </Typography>
       </Box>
     </Paper>

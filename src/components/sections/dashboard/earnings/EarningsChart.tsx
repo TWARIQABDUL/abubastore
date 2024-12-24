@@ -13,14 +13,17 @@ import { ReactElement, useMemo } from 'react';
 type EarningsChartProps = {
   chartRef: React.MutableRefObject<EChartsReactCore | null>;
   sx?: SxProps;
+  value:number
 };
 
 type EarningsChartOptions = echarts.ComposeOption<
   GaugeSeriesOption | LegendComponentOption | TooltipComponentOption | GridComponentOption
 >;
 
-const EarningsChart = ({ chartRef, ...rest }: EarningsChartProps): ReactElement => {
+const EarningsChart = ({ chartRef,value, ...rest }: EarningsChartProps): ReactElement => {
   const theme = useTheme();
+  // console.log("some ",typeof);
+  
   const option: EarningsChartOptions = useMemo(
     () => ({
       series: [
@@ -75,13 +78,13 @@ const EarningsChart = ({ chartRef, ...rest }: EarningsChartProps): ReactElement 
           },
           data: [
             {
-              value: 80,
+              value: value,
             },
           ],
         },
       ],
     }),
-    [],
+    [value],
   );
 
   return <ReactEChart ref={chartRef} option={option} echarts={echarts} {...rest} mx="auto" />;
