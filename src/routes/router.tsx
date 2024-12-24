@@ -19,6 +19,8 @@ const Dashboard = lazy<() => ReactElement>(() => import('pages/dashboard/Dashboa
 const Login = lazy<() => ReactElement>(() => import('pages/authentication/Login'));
 const SignUp = lazy<() => ReactElement>(() => import('pages/authentication/SignUp'));
 const ErrorPage = lazy<() => ReactElement>(() => import('pages/error/ErrorPage'));
+const AddProduct = lazy<() => ReactElement>(() => import('pages/profiles/AddProduct'));
+
 
 const routes: RouteObject[] = [
   {
@@ -41,6 +43,10 @@ const routes: RouteObject[] = [
           {
             index: true,
             element: <Dashboard />,
+          },
+          {
+            path: paths.addproduct,
+            element: <AddProduct />,
           },
         ],
       },
