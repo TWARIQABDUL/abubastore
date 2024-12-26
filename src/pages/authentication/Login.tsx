@@ -12,6 +12,7 @@ import {
   Typography,
   InputAdornment,
   FormControlLabel,
+
 } from '@mui/material';
 import IconifyIcon from 'components/base/IconifyIcon';
 import { useState, ReactElement } from 'react';
@@ -21,15 +22,36 @@ import Image from 'components/base/Image';
 import logoWithText from '/Logo-with-text.png';
 
 const Login = (): ReactElement => {
+  const baseUrl ="https://store.thousandsofts.com/backend"
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState<boolean>(false);
-
-  const handleSubmit = () => {
-    navigate(rootPaths.homeRoot);
-  };
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   const handleClickShowPassword = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await fetch(`${baseUrl}/login`,{
+        method:'POST',
+        // { id: itemId }),
+        //         headers: {
+        body:JSON.stringify({email,password})
+    })
+    const results = await response.json()
+
+      if (results.token) {
+        localStorage.setItem('token', results.token);
+        navigate(rootPaths.homeRoot); // Navigate to home page on successful login
+      } else {
+        alert('Login failed. Please check your credentials.');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      alert('An error occurred. Please try again later.');
+    }
   };
 
   return (
@@ -59,6 +81,8 @@ const Login = (): ReactElement => {
             variant="filled"
             label="Email"
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             sx={{
               '.MuiFilledInput-root': {
                 bgcolor: 'grey.A100',
@@ -79,6 +103,8 @@ const Login = (): ReactElement => {
             variant="filled"
             label="Password"
             type={showPassword ? 'text' : 'password'}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             sx={{
               '.MuiFilledInput-root': {
                 bgcolor: 'grey.A100',

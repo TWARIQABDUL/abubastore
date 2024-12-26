@@ -121,7 +121,7 @@ const columns: GridColDef<any>[] = [
   },
 ];
 const CustomerTable = ({ searchText }: { searchText: string }): ReactElement => {
-  const baseUrl ="http://localhost/abuba-ecommerce-backend"
+  const baseUrl ="https://store.thousandsofts.com/backend"
   const apiRef = useGridApiRef<GridApi>();
   const [dyrow, setRow] = useState<any[]>([]);
 

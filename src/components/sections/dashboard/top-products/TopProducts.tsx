@@ -15,7 +15,7 @@ import SimpleBar from 'simplebar-react';
 
 const TopProducts = (): ReactElement => {
   const [products, setProducts] = useState<any[]>([]); // State to store fetched product data
-  const baseUrl ="http://localhost/abuba-ecommerce-backend"
+  const baseUrl ="https://store.thousandsofts.com/backend"
 
   useEffect(() => {
     // Axios request to fetch product data

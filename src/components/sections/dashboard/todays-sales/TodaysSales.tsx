@@ -13,7 +13,7 @@ interface SaleItem {
 }
 
 const TodaysSales = (): ReactElement => {
-  const baseUrl ="http://localhost/abuba-ecommerce-backend"
+  const baseUrl ="https://store.thousandsofts.com/backend"
   const [salesData, setSalesData] = useState<SaleItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);

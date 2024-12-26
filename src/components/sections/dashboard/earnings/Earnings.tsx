@@ -9,7 +9,7 @@ const Earnings = (): ReactElement => {
   const chartRef = useRef<EChartsReactCore | null>(null);
   const [totalEarnings, setTotalEarnings] = useState<number>(0);
   const [profitPercentage, setProfitPercentage] = useState<number>(0);
-  const baseUrl = "http://localhost/abuba-ecommerce-backend"
+  const baseUrl = "https://store.thousandsofts.com/backend"
 
   useEffect(() => {
     const fetchEarnings = async () => {
