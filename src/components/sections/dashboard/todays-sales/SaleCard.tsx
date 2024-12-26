@@ -13,7 +13,7 @@ export interface SaleItem {
 const SaleCard = ({ saleItem }: { saleItem: SaleItem }): ReactElement => {
   return (
     <Stack gap={6} p={5} borderRadius={4} height={1} bgcolor="background.default">
-      <Image src={`src/${saleItem.icon}`} alt={saleItem.title} width={26} height={26} />
+      <Image src={`${saleItem.icon}`} alt={saleItem.title} width={26} height={26} />
       <Box>
         <Typography variant="h4" color="common.white" mb={4}>
           {saleItem.value}
