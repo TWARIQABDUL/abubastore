@@ -1,5 +1,5 @@
 import { lazy, Suspense, ReactElement, PropsWithChildren } from 'react';
-import { Outlet, RouteObject, RouterProps, createBrowserRouter } from 'react-router-dom';
+import { Outlet, RouteObject, createBrowserRouter } from 'react-router-dom';
 
 import PageLoader from 'components/loading/PageLoader';
 import Splash from 'components/loading/Splash';
@@ -8,11 +8,11 @@ import paths from './paths';
 
 const App = lazy<() => ReactElement>(() => import('App'));
 
-const MainLayout = lazy<({ children }: PropsWithChildren) => ReactElement>(
-  () => import('layouts/main-layout'),
+const MainLayout = lazy<({ children }: PropsWithChildren) => ReactElement>( 
+  () => import('layouts/main-layout')
 );
 const AuthLayout = lazy<({ children }: PropsWithChildren) => ReactElement>(
-  () => import('layouts/auth-layout'),
+  () => import('layouts/auth-layout')
 );
 
 const Dashboard = lazy<() => ReactElement>(() => import('pages/dashboard/Dashboard'));
@@ -20,7 +20,6 @@ const Login = lazy<() => ReactElement>(() => import('pages/authentication/Login'
 const SignUp = lazy<() => ReactElement>(() => import('pages/authentication/SignUp'));
 const ErrorPage = lazy<() => ReactElement>(() => import('pages/error/ErrorPage'));
 const AddProduct = lazy<() => ReactElement>(() => import('pages/profiles/AddProduct'));
-
 
 const routes: RouteObject[] = [
   {
@@ -50,7 +49,6 @@ const routes: RouteObject[] = [
           },
         ],
       },
-      
       {
         path: rootPaths.authRoot,
         element: (
@@ -61,7 +59,6 @@ const routes: RouteObject[] = [
           </AuthLayout>
         ),
         children: [
-          
           {
             path: paths.login,
             element: <Login />,
@@ -74,16 +71,11 @@ const routes: RouteObject[] = [
       },
     ],
   },
-  
   {
     path: '*',
     element: <ErrorPage />,
   },
 ];
-
-const options: { basename: string } = {
-  basename: '/',
-};
 
 const router = createBrowserRouter(routes);
 
