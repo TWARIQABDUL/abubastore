@@ -76,10 +76,6 @@ const routes: RouteObject[] = [
   },
 ];
 
-const options: { basename: string } = {
-  basename: '/',
-};
-
 const router = createBrowserRouter(routes);
 
 export default router;
