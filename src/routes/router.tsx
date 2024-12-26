@@ -85,6 +85,6 @@ const options: { basename: string } = {
   basename: '/',
 };
 
-const router: Partial<RouterProps> = createBrowserRouter(routes, options);
+const router = createBrowserRouter(routes);
 
 export default router;
