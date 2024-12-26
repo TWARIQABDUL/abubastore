@@ -20,6 +20,10 @@ const Login = lazy<() => ReactElement>(() => import('pages/authentication/Login'
 const SignUp = lazy<() => ReactElement>(() => import('pages/authentication/SignUp'));
 const ErrorPage = lazy<() => ReactElement>(() => import('pages/error/ErrorPage'));
 const AddProduct = lazy<() => ReactElement>(() => import('pages/profiles/AddProduct'));
+<<<<<<< HEAD
+=======
+
+>>>>>>> aab4d3efa8f5b56cce63b2cfdc59ce0f77ab48db
 
 const routes: RouteObject[] = [
   {
