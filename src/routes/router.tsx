@@ -5,6 +5,7 @@ import PageLoader from 'components/loading/PageLoader';
 import Splash from 'components/loading/Splash';
 import { rootPaths } from './paths';
 import paths from './paths';
+import { AuthProvider } from 'auth/AuthContext';
 
 const App = lazy<() => ReactElement>(() => import('App'));
 
@@ -20,11 +21,14 @@ const Login = lazy<() => ReactElement>(() => import('pages/authentication/Login'
 const SignUp = lazy<() => ReactElement>(() => import('pages/authentication/SignUp'));
 const ErrorPage = lazy<() => ReactElement>(() => import('pages/error/ErrorPage'));
 const AddProduct = lazy<() => ReactElement>(() => import('pages/profiles/AddProduct'));
+
 const routes: RouteObject[] = [
   {
     element: (
       <Suspense fallback={<Splash />}>
+        <AuthProvider>
         <App />
+        </AuthProvider>
       </Suspense>
     ),
     children: [
