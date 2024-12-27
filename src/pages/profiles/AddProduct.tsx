@@ -89,8 +89,17 @@ const AddProduct = (): ReactElement => {
         'Authorization': `Bearer ${token}`  // No need for stringifying, just set the token directly
       }
     })
-      .then(res => {
-        console.log(res);
+      .then(_res => {
+        setFormData({
+          productName: '',
+          price: '',
+          stock: '',
+          category: '',
+          collection: '',
+          rank: '',
+          image: null,
+          description: '',
+        });
       }).catch(_e=>{
         // console.log("fucked up",e);
         
