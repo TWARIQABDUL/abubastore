@@ -3,11 +3,11 @@ import IconifyIcon from 'components/base/IconifyIcon';
 import profile from 'assets/images/account/Profile.png';
 import { useState, MouseEvent, useCallback, ReactElement } from 'react';
 import userMenuItems from 'data/usermenu-items';
-
+import { useAuth } from 'auth/AuthContext';
 const UserDropdown = (): ReactElement => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const menuOpen = Boolean(anchorEl);
-
+  const {logout} = useAuth()
   const handleUserClick = useCallback((event: MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   }, []);
@@ -66,31 +66,39 @@ const UserDropdown = (): ReactElement => {
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         {userMenuItems.map((userMenuItem) => (
-          <MenuItem key={userMenuItem.id} onClick={handleUserClose}>
-            <ListItemIcon
-              sx={{
-                minWidth: `0 !important`,
-                color: userMenuItem.color,
-                width: 14,
-                height: 10,
-                mb: 1.5,
-              }}
-            >
-              <IconifyIcon icon={userMenuItem.icon} color={userMenuItem.color} />
-            </ListItemIcon>
-            <ListItemText
-              sx={(theme) => ({
-                color: userMenuItem.color,
-                '& .MuiListItemText-primary': {
-                  fontSize: theme.typography.subtitle2.fontSize,
-                  fontFamily: theme.typography.subtitle2.fontFamily,
-                  fontWeight: theme.typography.subtitle2.fontWeight,
-                },
-              })}
-            >
-              {userMenuItem.title}
-            </ListItemText>
-          </MenuItem>
+          <MenuItem
+          key={userMenuItem.id}
+          onClick={() => {
+            handleUserClose();
+            if (userMenuItem.title === 'Logout') {
+              logout(); // Invoke logout for the "Logout" item
+            }
+          }}
+        >
+          <ListItemIcon
+            sx={{
+              minWidth: `0 !important`,
+              color: userMenuItem.color,
+              width: 14,
+              height: 10,
+              mb: 1.5,
+            }}
+          >
+            <IconifyIcon icon={userMenuItem.icon} color={userMenuItem.color} />
+          </ListItemIcon>
+          <ListItemText
+            sx={(theme) => ({
+              color: userMenuItem.color,
+              '& .MuiListItemText-primary': {
+                fontSize: theme.typography.subtitle2.fontSize,
+                fontFamily: theme.typography.subtitle2.fontFamily,
+                fontWeight: theme.typography.subtitle2.fontWeight,
+              },
+            })}
+          >
+            {userMenuItem.title}
+          </ListItemText>
+        </MenuItem>        
         ))}
       </Menu>
     </>

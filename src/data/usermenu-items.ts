@@ -3,6 +3,7 @@ interface UserMenuItem {
   title: string;
   icon: string;
   color?: string;
+  onClick?: () => void; // Optional click handler
 }
 
 const userMenuItems: UserMenuItem[] = [
@@ -41,6 +42,10 @@ const userMenuItems: UserMenuItem[] = [
     title: 'Logout',
     icon: 'material-symbols:logout',
     color: 'error.main',
+    onClick: () => {
+      // Add your logout logic here
+      console.log('Logout clicked');
+    },
   },
 ];
 
