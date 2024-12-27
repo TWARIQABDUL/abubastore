@@ -5,6 +5,7 @@ import PageLoader from 'components/loading/PageLoader';
 import Splash from 'components/loading/Splash';
 import { rootPaths } from './paths';
 import paths from './paths';
+import { AuthProvider } from 'auth/AuthContext';
 
 const App = lazy<() => ReactElement>(() => import('App'));
 
@@ -25,7 +26,9 @@ const routes: RouteObject[] = [
   {
     element: (
       <Suspense fallback={<Splash />}>
+        <AuthProvider>
         <App />
+        </AuthProvider>
       </Suspense>
     ),
     children: [
