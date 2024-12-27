@@ -119,7 +119,7 @@ const AddProduct = (): ReactElement => {
           
           uploadProduct().then(some=>{
             console.log(some);
-            
+            alert("Product Added succesfull")
           });
         }
       })
